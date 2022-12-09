@@ -1,0 +1,1 @@
+y =- parentObj.y + window_get_height()
