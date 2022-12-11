@@ -109,8 +109,16 @@ if (_collisions) {
 	}
 	y = _ry
 	
-	angle = get_player_xangle()
+	angle = -angle
 	
 }
 
 ds_list_destroy(_list)
+
+if (collision_rectangle(x - 4, y - (4 * sign(vspd)), x + 4, y + (4 * sign(vspd)), obj_brickout, 0, 1)) {
+	while (!place_meeting(x, y, obj_brickout)) {
+		x += sign(hspd)
+		y += sign(vspd)
+	}
+	angle = -angle
+}

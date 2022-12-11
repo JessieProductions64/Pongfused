@@ -2,11 +2,14 @@
 // You can write your code in this editor
 
 // round stuff
-global.start = 1
 global.curScore = 0
+bouncecount = 0
 
 // RIVALS
 // 0 = SHERIF
+// 1 = JOE BIDEN
+// 2 = DOGMAN
+// 3 = FINAL
 global.rival = 0
 
 d_roomNum = 0

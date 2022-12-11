@@ -4,7 +4,7 @@
   "name": "HTML5",
   "option_html5_browser_title": "Pongfused",
   "option_html5_version": "1.0.0.0",
-  "option_html5_foldername": "html5game",
+  "option_html5_foldername": "pongfused",
   "option_html5_outputname": "index.html",
   "option_html5_splash_png": "splash.png",
   "option_html5_usesplash": false,

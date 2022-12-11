@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-room_goto(destroom)
+room_goto(destroom[global.rival])
 
 
 

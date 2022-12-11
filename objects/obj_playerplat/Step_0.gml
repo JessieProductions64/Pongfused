@@ -1,11 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-key_up = keyboard_check_pressed(ord("W"))
-key_up_hold = keyboard_check(ord("W"))
-key_down = keyboard_check(ord("S"))	
-key_left = keyboard_check(ord("A"))
-key_right = keyboard_check(ord("D"))
+scr_get_input()
 
 #region BEHAVIORS	
 	var move = key_right - key_left

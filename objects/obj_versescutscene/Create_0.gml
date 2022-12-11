@@ -1,17 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-destroom = rm_pong
+destroom[0] = rm_pong
+destroom[1] = rm_pong
+destroom[2] = rm_pong
 // RIVALS:
 // 0 = SHERIF
 // 1 = JOE BIDEN
-// 2 = JASPER
+// 2 = DOGMAN
 
-rival = 0
 flash = 0
 
 pingX = -256
 rivaX = 256
+
+logoX = (room_width/4) - 256
+logo2X = ((room_width/4) * 3) + 256
 
 cutscene = 0
 cutscene_frame = 0
