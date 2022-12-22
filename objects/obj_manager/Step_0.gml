@@ -3,44 +3,63 @@
 
 scr_get_input()
 
-if (room == rm_title) {
-	if (!audio_is_playing(mus_title)) {
-		audio_play_sound(mus_title, 4, 1)
-	}
-	
-	if (keyboard_check_pressed(key_up)) {
-		global.rival++
-	}
+#region menu functions and the like
+	switch room {
 		
-	if (keyboard_check_pressed(key_down)) {
-		global.rival--
+		case rm_title:
+			if (keyboard_check_pressed(ord("Z"))) {
+				room_goto(rm_rivalselect)
+			}
+		break
+		
+		case rm_debug:
+		
+			if (keyboard_check(ord("Z"))) {
+				room_goto(d_roomNum)
+			}
+	
+			if (key_up) {
+				d_roomNum++
+			}
+	
+			if (key_down) {
+				d_roomNum--
+			}
+		break;
+		
+		case rm_rivalselect:
+			
+			if (key_up) {
+				global.rival--
+			}
+			
+			if (key_down) {
+				global.rival++
+			}
+		
+			if (keyboard_check_pressed(ord("Z"))) {
+				room_goto(rm_verses)
+			}
+		break;
+	
 	}
 
-} else if (room == rm_debug) {
-	if (!audio_is_playing(mus_abstract)) {
-		audio_play_sound(mus_abstract, 4, 1)
+	if (keyboard_check(vk_space)) {
+		audio_stop_all()
+		room_goto(rm_debug)
+	
 	}
 	
-	if (keyboard_check(ord("Z"))) {
-		room_goto(d_roomNum)
-	}
-	
-	if (keyboard_check_pressed(vk_up)) {
-		d_roomNum++
-	}
-	
-	if (keyboard_check_pressed(vk_down)) {
-		d_roomNum--
-	}
-	
-	
-} else {
-	audio_stop_sound(mus_title)
-	audio_stop_sound(mus_abstract)
-}
+#endregion
 
-if (keyboard_check(vk_space)) {
-	audio_stop_all()
-	room_goto(rm_debug)
-	
+for (var i = 0; i < array_length(roommusics); i++) {
+	var o = roommusics[i]
+	if (room == o[0]) {
+		if (!audio_is_playing(o[1])) {
+			audio_play_sound(o[1], 1, 1)
+		}
+	} else {
+		audio_stop_sound(o[1])
+	}
+
 }

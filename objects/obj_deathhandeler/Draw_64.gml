@@ -12,4 +12,4 @@ if (death == 0) {
 	draw_text(room_width/2 - 160, ((room_height/2) + sin(counter/10) * 10), "YOUR LOOSE\nGAME OVER!")
 }
 
-counter += 0.5
+counter += 0.4

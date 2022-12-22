@@ -15,13 +15,6 @@ switch room {
 
 }
 
-switch global.rival {
-	case 0:
-		sprite_index = spr_sherif
-	break
-}
+image_xscale = curDir
 
-if (hspd != 0) {
-	image_xscale = sign(hspd)
-}
 y += vspd

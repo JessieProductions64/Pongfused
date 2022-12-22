@@ -12,20 +12,7 @@ switch room {
 		draw_set_halign(fa_center)
 		draw_set_valign(fa_middle)
 		draw_set_font(fnt_C64Med)
-		draw_text(room_width/2, 275, "SELECT A RIVAL!")
-		
-		draw_rectangle(271, 300, 582, 331, 1)
-		draw_rectangle(272, 301, 581, 330, 1)
-		
-		draw_rectangle(271, 340, 582, 371, 1)
-		draw_rectangle(272, 341, 581, 370, 1)
-		
-		draw_rectangle(271, 380, 582, 411, 1)
-		draw_rectangle(272, 381, 581, 410, 1)
-		
-		draw_set_halign(fa_left)
-		draw_set_valign(fa_top)
-		draw_text(0, 0, "RIVAL: " + string(global.rival))
+		draw_text(room_width/2, 275, "PRESS Z TO PLAY")
 		
 	break;
 	
@@ -39,6 +26,19 @@ switch room {
 			draw_set_font(fnt_title)
 			draw_text(16, 0, "ROOM GOTO: " + string(room_get_name(d_roomNum)))
 		}
+	break;
+	
+	case rm_rivalselect:
+		
+		rivals[0] = 0 
+		rivals[1] = 120
+		rivals[2] = 240
+		rivals[3] = 360
+		
+		for (var i = 0; i < array_length(rivals); i++) {
+			draw_sprite_ext(spr_rivalselect, i, 0, rivals[i], 2, 2, 0, c_white, 1)
+		}
+	
 	break;
 	
 }

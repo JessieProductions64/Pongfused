@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-pongSpd = 3
-
 event_inherited()
+
+image_index = global.rival+1
+curDir = -1
+

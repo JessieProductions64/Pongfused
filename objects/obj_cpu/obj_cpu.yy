@@ -37,7 +37,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "normal",
-    "path": "folders/Objects/normal.yy",
+    "name": "playerstuff",
+    "path": "folders/Objects/normal/playerstuff.yy",
   },
 }

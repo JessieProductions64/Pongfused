@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-destroom[0] = rm_pong
+destroom[0] = sherif_1
 destroom[1] = rm_pong
 destroom[2] = rm_pong
 // RIVALS:

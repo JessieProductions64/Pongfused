@@ -50,8 +50,16 @@ scr_get_input()
 	
 	if (place_meeting(x, y + 1, obj_border)) {
 		grounded = 1
+	} else if (place_meeting(x, y + 1, obj_semisolid)) {
+		grounded = 1	
 	} else {
 		grounded = 0
+	}
+	
+	if (y > room_height) {
+		instance_create_layer(spawnx, spawny, layer, obj_playerplat)
+		global.playerHealth -= 12
+		instance_destroy()
 	}
 
 #endregion

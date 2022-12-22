@@ -11,3 +11,6 @@ sprRot = 0
 grounded = 1
 accSpd = 1
 maxSpd = 6
+
+spawnx = x
+spawny = y

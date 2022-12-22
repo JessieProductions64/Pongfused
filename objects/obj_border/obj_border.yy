@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_ballborder",
+    "path": "objects/obj_ballborder/obj_ballborder.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

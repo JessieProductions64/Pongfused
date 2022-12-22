@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 // round stuff
-global.curScore = 0
 bouncecount = 0
 
 // RIVALS
@@ -11,6 +10,7 @@ bouncecount = 0
 // 2 = DOGMAN
 // 3 = FINAL
 global.rival = 0
+roommusics = [ [rm_title, mus_title], [rm_debug, mus_abstract], [rm_rivalselect, mus_rivalselect] ]
 
 d_roomNum = 0
 

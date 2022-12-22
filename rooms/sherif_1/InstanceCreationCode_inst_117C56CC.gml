@@ -1,0 +1,1 @@
+isRivalGoal = 1
