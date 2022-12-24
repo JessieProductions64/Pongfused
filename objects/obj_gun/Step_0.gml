@@ -14,24 +14,27 @@ switch active {
 		image_index = 0
 		
 		if (instance_exists(curplayer)) {
-			instance_destroy()
-		}
 		
-		if (sign(curplayer.x - mouse_x) != 0) {
-			curdiraim = -(sign(curplayer.x - mouse_x))
-		}
-		
-		y = curplayer.y
-		x = curplayer.x + (32 * curdiraim)
-		
-		if (mouse_check_button_pressed(mb_left)) {
-			with (instance_create_layer(x + (6 * curdiraim), y, layer, obj_bullet)) {
-				curDir = other.curdiraim
-				hspd = 6 * (curDir)
+			if (sign(curplayer.x - mouse_x) != 0) {
+				curdiraim = -(sign(curplayer.x - mouse_x))
 			}
-		}
 		
-		image_xscale = curdiraim
+			y = curplayer.y
+			x = curplayer.x + (32 * curdiraim)
+		
+			if (mouse_check_button_pressed(mb_left)) {
+				with (instance_create_layer(x + (6 * curdiraim), y, layer, obj_bullet)) {
+					curDir = other.curdiraim
+					hspd = 6 * (curDir)
+				}
+				audio_play_sound(choose(snd_gun1, snd_gun2, snd_gun3, snd_gun4), 1, 0, .5, 0, random_range(1, 1.25), 1)
+				global.cameraShake = 4
+				global.cameraShakeMag = .5
+			}
+		
+			image_xscale = curdiraim
+		
+		} else {instance_destroy()}
 	
 	break;
 }

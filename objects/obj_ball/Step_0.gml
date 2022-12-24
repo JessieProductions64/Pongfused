@@ -102,6 +102,21 @@ if (_collisions) {
 	
 }
 
+ds_list_clear(_list)
+_collisions = collision_rectangle_list(x - 4, y - (4 * sign(vspd)), x + 4, y + (4 * sign(vspd)), obj_semisolid, 0, 1, _list, 0)
+
+if (_collisions) {
+	var _ry = y
+	if (vspd > 0) {
+		for (var i = 0; i < _collisions; i++) {
+			_ry = min(_ry, _list[| i].bbox_top + y - bbox_bottom)
+		}
+	} 
+	y = _ry
+	angle = -angle
+	
+}
+
 // vertical player collisions
 ds_list_clear(_list)
 _collisions = collision_rectangle_list(x - 4, y - (4 * sign(vspd)), x + 4, y + (4 * sign(vspd)), obj_player, 0, 1, _list, 0)

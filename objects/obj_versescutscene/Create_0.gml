@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 destroom[0] = sherif_1
-destroom[1] = rm_pong
+destroom[1] = biden_1
 destroom[2] = rm_pong
 // RIVALS:
 // 0 = SHERIF

@@ -45,13 +45,11 @@ scr_get_input()
 		}
 	}
 	
-	x += hspd
-	y += vspd
 	
 	if (place_meeting(x, y + 1, obj_border)) {
 		grounded = 1
 	} else if (place_meeting(x, y + 1, obj_semisolid)) {
-		grounded = 1	
+		grounded = 1
 	} else {
 		grounded = 0
 	}

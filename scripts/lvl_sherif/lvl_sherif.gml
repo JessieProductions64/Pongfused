@@ -5,13 +5,33 @@ function lvl_sherif(){
 	switch room {
 		case sherif_1:
 			if (!instance_exists(obj_ball)) {
-				instance_create_depth(room_width/2, room_height/2, obj_ball)
+				instance_create_layer(room_width/2, room_height/2, layer, obj_ball)
 			}
 			
-			if (global.curScore >= 16) {
+			if (global.curScore >= 6) {
 				audio_play_sound(mus_sherif, 1, 1)
 				message = "FIGHT LIKE COWBOYS"
+				timecounter = 0
 				room_goto(sherif_2)
+				
+			}
+			
+		break;
+	
+		case sherif_2:
+		
+			if (!instance_exists(obj_ball)) {
+				instance_create_layer(room_width/2, room_height/2, layer, obj_ball)
+			}
+			
+			if (timecounter == 500) {
+				instance_create_layer(room_width/2, room_height/2, layer, obj_gun)
+			}
+			
+			if (timecounter == 1800) {
+				message = "FIGHT LIKE TENNIS"
+				timecounter = 0
+				room_goto(sherif_3)
 			}
 			
 		break;

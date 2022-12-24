@@ -6,7 +6,7 @@
   "volume": 1.0,
   "parentRoom": null,
   "views": [
-    {"inherit":false,"visible":true,"xview":0,"yview":0,"wview":854,"hview":480,"xport":0,"yport":0,"wport":854,"hport":480,"hborder":999,"vborder":999,"hspeed":-1,"vspeed":-1,"objectId":{"name":"obj_playerplat","path":"objects/obj_playerplat/obj_playerplat.yy",},},
+    {"inherit":false,"visible":true,"xview":0,"yview":0,"wview":854,"hview":480,"xport":0,"yport":0,"wport":854,"hport":480,"hborder":999,"vborder":999,"hspeed":-1,"vspeed":-1,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":320,"hview":240,"xport":0,"yport":0,"wport":320,"hport":240,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":320,"hview":240,"xport":0,"yport":0,"wport":320,"hport":240,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":320,"hview":240,"xport":0,"yport":0,"wport":320,"hport":240,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
