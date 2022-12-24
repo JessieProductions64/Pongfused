@@ -3,7 +3,6 @@
   "resourceVersion": "1.6",
   "name": "pong-deluxe",
   "resources": [
-    {"id":{"name":"scr_playmusic","path":"scripts/scr_playmusic/scr_playmusic.yy",},"order":8,},
     {"id":{"name":"scr_collision","path":"scripts/scr_collision/scr_collision.yy",},"order":3,},
     {"id":{"name":"spr_break","path":"sprites/spr_break/spr_break.yy",},"order":1,},
     {"id":{"name":"spr_global_tiles","path":"sprites/spr_global_tiles/spr_global_tiles.yy",},"order":3,},
@@ -90,6 +89,7 @@
     {"id":{"name":"spr_standoff_bang","path":"sprites/spr_standoff_bang/spr_standoff_bang.yy",},"order":2,},
     {"id":{"name":"obj_ballborder","path":"objects/obj_ballborder/obj_ballborder.yy",},"order":5,},
     {"id":{"name":"mus_abstract","path":"sounds/mus_abstract/mus_abstract.yy",},"order":4,},
+    {"id":{"name":"snd_3minutesofcrickets","path":"sounds/snd_3minutesofcrickets/snd_3minutesofcrickets.yy",},"order":12,},
     {"id":{"name":"bg_city","path":"sprites/bg_city/bg_city.yy",},"order":0,},
     {"id":{"name":"spr_standoff_idle","path":"sprites/spr_standoff_idle/spr_standoff_idle.yy",},"order":0,},
     {"id":{"name":"spr_cs_gameover2","path":"sprites/spr_cs_gameover2/spr_cs_gameover2.yy",},"order":8,},

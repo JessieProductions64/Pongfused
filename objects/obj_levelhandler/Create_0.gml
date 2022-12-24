@@ -9,6 +9,7 @@ global.curScoreAdd = 0
 curLevelScr = noone
 timecounter = 0
 
+setup = 0
 showhud = 0
 healthcount = 0
 playerprevhealth = global.playerHealth
