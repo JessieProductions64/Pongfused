@@ -4,7 +4,7 @@
 switch room {
 	
 	case rm_title:
-		draw_sprite(spr_logo, 0, round(room_width/2), round((room_height/2) - 64 + (sin(bouncecount)*10)))
+		draw_sprite_ext(spr_logo, 0, round(room_width/2), round((room_height/2) - 32 + round(sin(bouncecount)*10)), 2, 2, 0, c_white, 1)
 		bouncecount += 0.05
 		
 		draw_set_color(c_white)
@@ -12,7 +12,7 @@ switch room {
 		draw_set_halign(fa_center)
 		draw_set_valign(fa_middle)
 		draw_set_font(fnt_C64Med)
-		draw_text(room_width/2, 275, "PRESS Z TO PLAY")
+		draw_text(room_width/2, 380, "PRESS Z TO PLAY")
 		
 	break;
 	

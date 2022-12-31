@@ -26,6 +26,9 @@ if (curLevelScr != noone) {
 	showhud = 1
 }
 
-
+if (global.playerHealth <= 0) {
+	room_goto(rm_death)
+	scr_reset()
+}
 
 timecounter++

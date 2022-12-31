@@ -21,15 +21,19 @@ switch active {
 		
 			y = curplayer.y
 			x = curplayer.x + (32 * curdiraim)
-		
-			if (mouse_check_button_pressed(mb_left)) {
-				with (instance_create_layer(x + (6 * curdiraim), y, layer, obj_bullet)) {
-					curDir = other.curdiraim
-					hspd = 6 * (curDir)
+			if (ammo > 0) {
+				if (mouse_check_button_pressed(mb_left)) {
+					with (instance_create_layer(x + (6 * curdiraim), y, layer, obj_bullet)) {
+						curDir = other.curdiraim
+						hspd = 6 * (curDir)
+					}
+					ammo--
+					audio_play_sound(choose(snd_gun1, snd_gun2, snd_gun3, snd_gun4), 1, 0, .5, 0, random_range(1, 1.25), 1)
+					global.cameraShake = 4
+					global.cameraShakeMag = .5
 				}
-				audio_play_sound(choose(snd_gun1, snd_gun2, snd_gun3, snd_gun4), 1, 0, .5, 0, random_range(1, 1.25), 1)
-				global.cameraShake = 4
-				global.cameraShakeMag = .5
+			} else {
+				instance_destroy()
 			}
 		
 			image_xscale = curdiraim

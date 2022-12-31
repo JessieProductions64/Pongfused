@@ -42,6 +42,20 @@ function lvl_sherif(){
 			}
 			
 		break;
+		
+		case sherif_3:
+			if (instance_exists(obj_ball)) {
+				timecounter = 0
+				
+			} else {
+					message = "NICE SHOT"
+				if (timecounter == 120) {
+					message = "FIGHT LIKE THE WIND"
+					room_goto(sherif_4)
+				}
+			}
+
+		break;
 	
 	}
 }

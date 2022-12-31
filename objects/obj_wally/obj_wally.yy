@@ -38,7 +38,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "normal",
-    "path": "folders/Objects/normal.yy",
+    "name": "platform",
+    "path": "folders/Objects/platform.yy",
   },
 }

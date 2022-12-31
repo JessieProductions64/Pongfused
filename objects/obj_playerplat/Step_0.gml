@@ -55,8 +55,8 @@ scr_get_input()
 	}
 	
 	if (y > room_height) {
+		global.playerHealth -= 10
 		instance_create_layer(spawnx, spawny, layer, obj_playerplat)
-		global.playerHealth -= 12
 		instance_destroy()
 	}
 
