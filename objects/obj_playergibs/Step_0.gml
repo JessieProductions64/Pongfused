@@ -19,6 +19,4 @@ if (y < 0) {
 	instance_destroy()
 }
 
-vspd += global.platGrav
-
 clamp(vspd, global.platGrav, 8)

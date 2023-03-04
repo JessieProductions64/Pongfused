@@ -30,14 +30,9 @@ switch room {
 	
 	case rm_rivalselect:
 		
-		rivals[0] = 0 
-		rivals[1] = 120
-		rivals[2] = 240
-		rivals[3] = 360
-		
-		for (var i = 0; i < array_length(rivals); i++) {
-			draw_sprite_ext(spr_rivalselect, i, 0, rivals[i], 2, 2, 0, c_white, 1)
-		}
+		pal_swap_set(spr_rivalselectPal, global.rival + 1, 0)
+		draw_sprite_ext(spr_rivalselect, 0, 0, 0, 2, 2, 0, c_white, 1)
+		pal_swap_reset()
 	
 	break;
 	

@@ -31,11 +31,15 @@ scr_get_input()
 			
 			if (key_up) {
 				global.rival--
+				audio_play_sound(snd_hit2, 1, 0)
 			}
 			
 			if (key_down) {
 				global.rival++
+				audio_play_sound(snd_hit2, 1, 0)
 			}
+			
+			global.rival = clamp(global.rival, 0, array_length(global.destroom) - 1)
 		
 			if (keyboard_check_pressed(ord("Z"))) {
 				room_goto(rm_verses)

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 if (x >= room_width) {
-	x = -384
+	x = -sprite_width
 }
 
 vspd += global.platGrav

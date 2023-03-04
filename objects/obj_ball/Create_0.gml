@@ -18,3 +18,5 @@ if (room != rm_breakout) {
 	angle = 90
 }
 sprRot = 0
+
+curPal = 1

@@ -6,6 +6,8 @@ global.enemyHealth = 100
 global.curScore = 0
 global.curScoreAdd = 0
 
+global.cpuStyle = 0
+
 curLevelScr = noone
 timecounter = 0
 
@@ -14,3 +16,4 @@ showhud = 0
 healthcount = 0
 playerprevhealth = global.playerHealth
 enemyprevhealth = global.enemyHealth
+

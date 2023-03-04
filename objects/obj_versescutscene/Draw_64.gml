@@ -11,15 +11,16 @@ switch cutscene {
 	
 	case 1:
 		draw_sprite_ext(spr_cs_vsbg, 0, 0, 0, 2, 2, 0, c_white, 1)
+		draw_sprite_ext(spr_cs_rivaltext, 0, logoX + irandom_range(-2, 2), -64 + irandom_range(-2, 2), 2, 2, 0, c_white, 1)
+		draw_sprite_ext(spr_cs_rivaltext, global.rival+1, logo2X + irandom_range(-4, 4), -64 + irandom_range(-2, 2), 2, 2, 0, c_white, 1)
 		draw_sprite_ext(spr_cs_ping, 0, pingX, 0, 2, 2, 0, c_white, 1)
 		draw_sprite_ext(spr_cs_rival, global.rival, rivaX, 0, 2, 2, 0, c_white, 1)
-		draw_sprite_ext(spr_cs_rivaltext, 0, logoX, -64, 2, 2, 0, c_white, 1)
-		draw_sprite_ext(spr_cs_rivaltext, global.rival+1, logo2X, -64, 2, 2, 0, c_white, 1)
 		
-		pingX = lerp(pingX, 0, .15)
-		rivaX = lerp(rivaX, 0, .15)
-		logoX = lerp(logoX, (room_width/4) - 32, .05)
-		logo2X = lerp(logo2X, ((room_width/4) * 3) + 32, .05)
+		logoX = approach(logoX, (room_width/4) - 32, 2)
+		logo2X = approach(logo2X, ((room_width/4) * 3) + 32, 2)
+		pingX = approach(pingX, 0, 4)
+		rivaX = approach(rivaX, 0, 4)
+		
 		
 	break;
 

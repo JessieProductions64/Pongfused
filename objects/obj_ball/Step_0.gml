@@ -58,7 +58,6 @@ if (_inst.hspd == 0) {
 		var _p = instance_nearest(x, y, obj_player)
 		x = _rx
 	
-		audio_stop_sound(snd_hit2)
 		audio_play_sound(snd_hit2, 1, 0, 1, 0, random_range(1, 1.25), 0)
 
 	
