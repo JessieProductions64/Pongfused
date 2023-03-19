@@ -24,7 +24,7 @@ global.destroom[2] = rm_pong
 global.destroom[3] = rm_pong
 
 global.rival = 0
-roommusics = [ [rm_title, mus_title], [rm_debug, mus_abstract], [rm_rivalselect, mus_rivalselect], [rm_pissing, mus_test] ]
+roommusics = [ [rm_title, mus_title], [rm_debug, mus_abstract], [rm_rivalselect, mus_rivalselect]]
 
 d_roomNum = 0
 

@@ -9,10 +9,17 @@ scr_get_input()
 	if (key_up && grounded) {
 		vspd = -12
 	}
+	
+	if (key_down && is_grounded(obj_semisolid)) {
+		while (is_grounded(obj_semisolid)) {
+			y++
+		}
+	}
 		
 	if (vspd < 0 && !key_up_hold) {
 		vspd += global.platGrav
 	}
+	
 		
 	if (!grounded) {
 		vspd += global.platGrav 
@@ -21,7 +28,9 @@ scr_get_input()
 		
 	if (move != 0) {	
 		hspd += move * accSpd
-		hspd = clamp(hspd, -maxSpd , maxSpd )
+		if (abs(hspd) > maxSpd) {
+			hspd = approach(hspd, maxSpd * curXDir, accSpd)
+		}
 		curXDir = move
 	} else {
 		if (hspd - accSpd > 0) {
@@ -32,6 +41,10 @@ scr_get_input()
 			hspd = 0
 		}
 			
+	}
+	
+	if (key_attack_pressed) {
+		hspd = dashSpd * curXDir
 	}
 	
 	scr_collision()
@@ -46,13 +59,7 @@ scr_get_input()
 	}
 	
 	
-	if (place_meeting(x, y + 1, obj_border)) {
-		grounded = 1
-	} else if (place_meeting(x, y + 1, obj_semisolid)) {
-		grounded = 1
-	} else {
-		grounded = 0
-	}
+	grounded = max(0, is_grounded(obj_border), is_grounded(obj_semisolid))
 	
 	if (y > room_height) {
 		global.playerHealth -= 10

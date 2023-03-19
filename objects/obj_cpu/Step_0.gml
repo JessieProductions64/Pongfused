@@ -10,19 +10,14 @@ function get_ball_y_target() {
 	var i = 0
 	
 	while ((_hspd * i) < _dist) {
-		
-		if (!collision_rectangle(_b.x, _b.y, _hspd * i, _vspd * i, obj_ballborder, 0, 1)) {
-			_newY = _b.y + (_vspd * i)
-		} else {
-			_newY = _b.y + (_vspd * i)
-		}
-		
 		i++
+		_newY = _b.y + (_vspd * i)
+		
 	}
 	
 	//_newY += irandom_range(-offset, offset)
-	
-	// add code when plague is braining properly
+
+	show_debug_message(_newY, "NEW Y = " + string(_newY))
 	
 	return _newY;
 	
@@ -38,6 +33,14 @@ switch global.cpuStyle {
 			
 			if (sign(_b.hspd)) {
 				if (targetY == noone) {
+					targetY = get_ball_y_target()
+				}
+				
+				if (ballDir == noone) {
+					ballDir = _b.angle
+				}
+				
+				if (ballDir != _b.angle) {
 					targetY = get_ball_y_target()
 				}
 			

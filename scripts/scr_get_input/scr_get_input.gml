@@ -8,4 +8,5 @@ function scr_get_input(){
 	
 	key_select = keyboard_check(ord("Z"))
 	key_attack = keyboard_check(ord("X"))
+	key_attack_pressed = keyboard_check_pressed(ord("X"))
 }

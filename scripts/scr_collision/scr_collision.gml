@@ -81,19 +81,24 @@ function scr_collision(){
 		vspd = 0
 	
 	}
-
+	
 	ds_list_clear(_list)
 	_collisions = collision_rectangle_list(x - 8, y - (25 * sign(vspd)), x + 8, y + (39 * sign(vspd)), obj_semisolid, 0, 1, _list, 0)
 
 	if (_collisions) {
 		var _ry = y
-		if (vspd >= 0) {
+		if (vspd > 0) {
 			for (var i = 0; i < _collisions; i++) {
 				_ry = min(_ry, _list[| i].bbox_top + y - bbox_bottom)
 			}
-		} 
-		y = _ry
-
+		}
+		
+		if (is_grounded(obj_semisolid)) {
+			y = _ry
+			vspd = 0
+		}
+		
+	
 	}
 	
 	ds_list_destroy(_list)

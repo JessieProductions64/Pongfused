@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_border2",
-  "bbox_bottom": 0,
+  "bbox_bottom": 63,
   "bbox_left": 0,
   "bbox_right": 63,
   "bbox_top": 0,

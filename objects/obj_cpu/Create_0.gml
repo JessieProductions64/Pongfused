@@ -17,3 +17,4 @@ key_up_hold = 0
 
 // PONG VARIABLES
 targetY = noone
+ballDir = noone
